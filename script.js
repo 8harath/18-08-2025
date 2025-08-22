@@ -3,9 +3,8 @@ class AppleSlideshow {
     this.currentSlide = 0
     this.totalSlides = document.querySelectorAll(".slide").length
     this.slides = document.querySelectorAll(".slide")
-    this.prevBtn = document.getElementById("prevBtn")
-    this.nextBtn = document.getElementById("nextBtn")
-    this.slideCounter = document.getElementById("slideCounter")
+    this.topProgress = document.getElementById("topProgress")
+    this.topSlideCounter = document.getElementById("topSlideCounter")
     this.progress = document.getElementById("progress")
 
     this.init()
@@ -14,7 +13,6 @@ class AppleSlideshow {
   init() {
     this.updateSlideCounter()
     this.updateProgress()
-    this.updateNavButtons()
     this.bindEvents()
     this.resetAnimations()
     this.initMermaid()
@@ -35,9 +33,6 @@ class AppleSlideshow {
   }
 
   bindEvents() {
-    this.prevBtn.addEventListener("click", () => this.previousSlide())
-    this.nextBtn.addEventListener("click", () => this.nextSlide())
-
     // Keyboard navigation
     document.addEventListener("keydown", (e) => {
       if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
@@ -98,7 +93,6 @@ class AppleSlideshow {
 
     this.updateSlideCounter()
     this.updateProgress()
-    this.updateNavButtons()
   }
 
   nextSlide() {
@@ -116,17 +110,13 @@ class AppleSlideshow {
   }
 
   updateSlideCounter() {
-    this.slideCounter.textContent = `${this.currentSlide + 1} / ${this.totalSlides}`
+    this.topSlideCounter.textContent = `${this.currentSlide + 1} / ${this.totalSlides}`
   }
 
   updateProgress() {
     const progressPercent = ((this.currentSlide + 1) / this.totalSlides) * 100
     this.progress.style.width = `${progressPercent}%`
-  }
-
-  updateNavButtons() {
-    this.prevBtn.disabled = this.currentSlide === 0
-    this.nextBtn.disabled = this.currentSlide === this.totalSlides - 1
+    this.topProgress.style.width = `${progressPercent}%`
   }
 
   resetAnimations() {

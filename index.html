@@ -31,7 +31,7 @@
 
         <!-- Slide 2: Introduction & Context -->
         <div class="slide">
-            <div class="slide-content">
+            <div class="slide-content centered">
                 <div class="slide-header fade-in">
                     <i class="fas fa-info-circle"></i>
                     <h2 class="section-header">Introduction & Context</h2>
@@ -445,45 +445,29 @@
         <div class="slide">
             <div class="slide-content">
                 <h2 class="section-header fade-in">Conclusions</h2>
-                                 <div class="conclusions-content">
-                     <div class="conclusion-section fade-in reveal-delay-1">
-                         <div class="conclusion-icon">
-                             <i class="fas fa-lightbulb"></i>
-                         </div>
-                         <h3>Project Impact</h3>
-                         <p>Demonstrates NAVIC's critical role in indigenous crash detection, addressing real-world gaps in India's road safety ecosystem</p>
-                         <div class="impact-metric">
-                             <span class="metric-number">180K+</span>
-                             <span class="metric-label">Lives Potentially Saved</span>
-                         </div>
-                     </div>
-                     <div class="conclusion-section fade-in reveal-delay-2">
-                         <div class="conclusion-icon">
-                             <i class="fas fa-star"></i>
-                         </div>
-                         <h3>Key Achievements</h3>
-                         <ul class="bullet-list">
-                             <li>Retrofit solution for India's safety needs</li>
-                             <li>Path to scalable deployment</li>
-                             <li>Indigenous technology advantage</li>
-                         </ul>
-                         <div class="achievement-badge">
-                             <i class="fas fa-trophy"></i>
-                             <span>Innovation Award</span>
-                         </div>
-                     </div>
-                     <div class="conclusion-section fade-in reveal-delay-3">
-                         <div class="conclusion-icon">
-                             <i class="fas fa-handshake"></i>
-                         </div>
-                         <h3>Future Collaboration</h3>
-                         <p>Seeking feedback on MQTT/NAVIC integration and collaboration opportunities for nationwide deployment</p>
-                         <div class="collaboration-cta">
-                             <i class="fas fa-users"></i>
-                             <span>Join the Mission</span>
-                         </div>
-                     </div>
-                 </div>
+                <div class="conclusions-content">
+                    <div class="conclusion-section fade-in reveal-delay-1">
+                        <div class="conclusion-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Addresses Critical Gaps in Road Safety</h3>
+                        <p>This project confronts key challenges in vehicular emergency response, focusing on the limitations of conventional GPS, the high cost of commercial systems, and the lack of safety features in legacy vehicles.</p>
+                    </div>
+                    <div class="conclusion-section fade-in reveal-delay-2">
+                        <div class="conclusion-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Proposes an Innovative, Indigenous Solution</h3>
+                        <p>The core of this project is the design of a novel framework that integrates India's NAVIC satellite system for superior regional positioning. This is combined with a multi-sensor fusion approach for reliable crash detection and a modern publish-subscribe architecture for scalable alert delivery.</p>
+                    </div>
+                    <div class="conclusion-section fade-in reveal-delay-3">
+                        <div class="conclusion-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Establishes a Foundation for Significant Impact</h3>
+                        <p>The prototype development validates a cost-effective and retrofit-compatible approach that has the potential to make automated crash detection accessible to a much wider range of vehicles. This work lays the groundwork for a scalable solution that can enhance national road safety and promote technological self-reliance.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -505,11 +489,12 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <div class="navigation">
-        <button id="prevBtn" class="nav-btn">‹</button>
-        <span id="slideCounter">1 / 13</span>
-        <button id="nextBtn" class="nav-btn">›</button>
+    <!-- Top Navigation Progress Bar -->
+    <div class="top-navigation">
+        <div class="top-progress-bar">
+            <div class="top-progress" id="topProgress"></div>
+        </div>
+        <div class="top-slide-counter" id="topSlideCounter">1 / 13</div>
     </div>
 
     <!-- Progress bar -->
