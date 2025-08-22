@@ -1233,3 +1233,284 @@ body {
   margin-right: 10px;
   color: #007bff;
 }
+
+/* Category Icons */
+.category-icon {
+  font-size: 48px;
+  color: #dc3545;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Objective Icons */
+.objective-icon {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 20px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Enhanced Problems Grid */
+.problem-category {
+  background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+  padding: 30px;
+  border-radius: 16px;
+  border: 2px solid #fed7d7;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.problem-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #dc3545, #e53e3e);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.problem-category:hover::before {
+  transform: scaleX(1);
+}
+
+.problem-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(220, 53, 69, 0.15);
+  border-color: #dc3545;
+}
+
+/* Enhanced Objectives Grid */
+.objective {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.objective::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.objective:hover::before {
+  transform: scaleX(1);
+}
+
+.objective:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 123, 255, 0.15);
+  border-color: #007bff;
+}
+
+/* Enhanced Global Stats */
+.global-stats p {
+  font-size: 18px;
+  color: #666666;
+  margin: 15px 0;
+  padding: 15px 25px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 25px;
+  border: 2px solid #dee2e6;
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin: 10px 15px;
+}
+
+.global-stats p:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.15);
+  border-color: #007bff;
+}
+
+.global-stats i {
+  margin-right: 10px;
+  color: #007bff;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Scope Icons */
+.scope-icon {
+  font-size: 48px;
+  color: #28a745;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.scope-category:nth-child(2) .scope-icon {
+  color: #dc3545;
+}
+
+/* Methodology Icons */
+.methodology-icon {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 20px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+/* Enhanced Scope Grid */
+.scope-category {
+  background: linear-gradient(135deg, #f0fff4 0%, #dcffe4 100%);
+  padding: 30px;
+  border-radius: 16px;
+  border: 2px solid #dcffe4;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.scope-category:nth-child(2) {
+  background: linear-gradient(135deg, #fff5f5 0%, #fed7d7 100%);
+  border-color: #fed7d7;
+}
+
+.scope-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #28a745, #38a169);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.scope-category:nth-child(2)::before {
+  background: linear-gradient(90deg, #dc3545, #e53e3e);
+}
+
+.scope-category:hover::before {
+  transform: scaleX(1);
+}
+
+.scope-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(40, 167, 69, 0.15);
+  border-color: #28a745;
+}
+
+.scope-category:nth-child(2):hover {
+  box-shadow: 0 15px 40px rgba(220, 53, 69, 0.15);
+  border-color: #dc3545;
+}
+
+/* Enhanced Methodology Content */
+.methodology-section {
+  margin-bottom: 40px;
+  text-align: left;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 25px;
+  border-radius: 12px;
+  border: 2px solid #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.methodology-section:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.1);
+  border-color: #007bff;
+}
+
+/* Progress Icons */
+.progress-icon {
+  font-size: 48px;
+  color: #28a745;
+  margin-bottom: 20px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.progress-category:nth-child(2) .progress-icon {
+  color: #ffc107;
+  animation: spin 2s linear infinite;
+}
+
+.progress-category:nth-child(3) .progress-icon {
+  color: #6c757d;
+}
+
+/* Enhanced Progress Grid */
+.progress-category {
+  background: linear-gradient(135deg, #f0fff4 0%, #dcffe4 100%);
+  padding: 30px;
+  border-radius: 16px;
+  border: 2px solid #dcffe4;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-category:nth-child(2) {
+  background: linear-gradient(135deg, #fffbf0 0%, #fef5e7 100%);
+  border-color: #fef5e7;
+}
+
+.progress-category:nth-child(3) {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-color: #e9ecef;
+}
+
+.progress-category::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #28a745, #38a169);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.progress-category:nth-child(2)::before {
+  background: linear-gradient(90deg, #ffc107, #e0a800);
+}
+
+.progress-category:nth-child(3)::before {
+  background: linear-gradient(90deg, #6c757d, #5a6268);
+}
+
+.progress-category:hover::before {
+  transform: scaleX(1);
+}
+
+.progress-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(40, 167, 69, 0.15);
+  border-color: #28a745;
+}
+
+.progress-category:nth-child(2):hover {
+  box-shadow: 0 15px 40px rgba(255, 193, 7, 0.15);
+  border-color: #ffc107;
+}
+
+.progress-category:nth-child(3):hover {
+  box-shadow: 0 15px 40px rgba(108, 117, 125, 0.15);
+  border-color: #6c757d;
+}
+
+/* Spin Animation for Spinner Icon */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
