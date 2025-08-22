@@ -72,6 +72,47 @@ body {
   font-size: 24px;
   font-weight: 300;
   color: #666666;
+  margin-bottom: 20px;
+}
+
+.tagline {
+  font-size: 28px;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.author-info {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.author-info p {
+  font-size: 20px;
+  color: #666666;
+  margin: 5px 0;
+}
+
+.context-text {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+.motivation {
+  font-size: 24px;
+  color: #333333;
+  margin-top: 40px;
+  max-width: 900px;
+  font-style: italic;
+}
+
+.pnt-explanation {
+  font-size: 28px;
+  color: #333333;
+  margin-bottom: 40px;
 }
 
 .feature {
@@ -550,6 +591,41 @@ body {
   .metrics-grid {
     grid-template-columns: 1fr;
   }
+
+  .relevance-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .problems-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .objectives-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .scope-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .progress-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .challenges-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -581,4 +657,245 @@ body {
     flex-direction: column;
     gap: 15px;
   }
+
+  .tagline {
+    font-size: 24px;
+  }
+
+  .context-text {
+    font-size: 24px;
+  }
+
+  .motivation {
+    font-size: 20px;
+  }
+
+  .pnt-explanation {
+    font-size: 24px;
+  }
+
+  .relevance-item h3,
+  .problem-category h3,
+  .objective h3,
+  .scope-category h3,
+  .progress-category h3,
+  .challenge-category h3,
+  .result-category h3,
+  .conclusion-section h3,
+  .methodology-section h3 {
+    font-size: 24px;
+  }
+
+  .relevance-item p,
+  .objective p {
+    font-size: 16px;
+  }
+
+  .conclusion-section p {
+    font-size: 18px;
+  }
+}
+
+/* Relevance Grid */
+.relevance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 40px 0;
+  max-width: 1000px;
+}
+
+.relevance-item {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.relevance-item h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.relevance-item p {
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.4;
+}
+
+.global-stats {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.global-stats p {
+  font-size: 20px;
+  color: #666666;
+  margin: 10px 0;
+}
+
+/* Problems Grid */
+.problems-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 40px 0;
+  max-width: 1000px;
+}
+
+.problem-category h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Objectives Grid */
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 40px 0;
+  max-width: 1000px;
+}
+
+.objective {
+  background: #f8f8f8;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.objective h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.objective p {
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.4;
+}
+
+/* Scope Grid */
+.scope-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 40px 0;
+  max-width: 1000px;
+}
+
+.scope-category h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Progress Grid */
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin: 40px 0;
+  max-width: 1000px;
+}
+
+.progress-category h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Challenges Grid */
+.challenges-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 40px 0;
+  max-width: 1000px;
+}
+
+.challenge-category h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Results Grid */
+.results-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin: 40px 0;
+  max-width: 1000px;
+}
+
+.result-category h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+/* Conclusions Content */
+.conclusions-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.conclusion-section {
+  margin-bottom: 40px;
+}
+
+.conclusion-section h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #000000;
+}
+
+.conclusion-section p {
+  font-size: 20px;
+  color: #333333;
+  line-height: 1.4;
+}
+
+/* Architecture Container */
+.architecture-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+.architecture-container .mermaid {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Methodology Content */
+.methodology-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.methodology-section {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.methodology-section h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #000000;
 }

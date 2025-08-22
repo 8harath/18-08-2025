@@ -3,296 +3,390 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAVIC-Based Crash Detection System</title>
+    <title>Geo-Decimation of Road Accident Alerts: A NAVIC-Based Publish-Subscribe Framework</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
 </head>
 <body>
     <div class="slideshow-container">
         <!-- Slide 1: Title -->
         <div class="slide active">
             <div class="slide-content centered">
-                <h1 class="title fade-in">NAVIC-Based<br>Crash Detection System</h1>
-                <p class="subtitle fade-in reveal-delay-1">Geo-Decimation Framework for Legacy Vehicles</p>
-                <p class="caption fade-in reveal-delay-2">Technical Implementation & Validation</p>
+                <h1 class="title fade-in">Geo-Decimation of Road Accident Alerts</h1>
+                <h2 class="subtitle fade-in reveal-delay-1">A NAVIC-Based Publish-Subscribe Framework</h2>
+                <p class="caption fade-in reveal-delay-2">Indigenous IoT Solution for Retrofit Crash Detection in Legacy Vehicles</p>
+                <p class="tagline fade-in reveal-delay-3">Leveraging NAVIC for Real-Time Emergency Response in India's Road Safety Ecosystem</p>
+                <div class="author-info fade-in reveal-delay-4">
+                    <p>Your Name, IIT Tirupati</p>
+                    <p>August 2025</p>
+                </div>
             </div>
         </div>
 
-        <!-- Slide 2: The Problem -->
+        <!-- Slide 2: Introduction & Context -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Road Safety Crisis</h2>
+                <h2 class="section-header fade-in">Introduction & Context</h2>
+                <p class="context-text fade-in reveal-delay-1">Retrofit-compatible crash detection system using NAVIC to address India's road accident crisis</p>
                 <div class="stats-grid">
-                    <div class="stat fade-in reveal-delay-1">
-                        <div class="big-number">150,000</div>
-                        <div class="stat-label">Annual fatalities in India</div>
-                    </div>
                     <div class="stat fade-in reveal-delay-2">
-                        <div class="big-number">4 minutes</div>
-                        <div class="stat-label">Between each accident</div>
+                        <div class="big-number">180,000</div>
+                        <div class="stat-label">Fatalities in 2024 (MoRTH)</div>
                     </div>
                     <div class="stat fade-in reveal-delay-3">
+                        <div class="big-number">3 minutes</div>
+                        <div class="stat-label">Between each accident</div>
+                    </div>
+                    <div class="stat fade-in reveal-delay-4">
                         <div class="big-number">85%</div>
-                        <div class="stat-label">Occur on remote corridors</div>
+                        <div class="stat-label">Occur in remote areas</div>
                     </div>
                 </div>
+                <p class="motivation fade-in reveal-delay-5">Background in data analytics leading to IoT exploration; goal to build an "Indigio" solution for national sovereignty</p>
             </div>
         </div>
 
-        <!-- Slide 3: Current Solutions -->
+        <!-- Slide 3: Background on PNT -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Existing Systems Have Limitations</h2>
-                <ul class="bullet-list">
-                    <li class="slide-up reveal-delay-1">GPS accuracy issues in Indian terrain</li>
-                    <li class="slide-up reveal-delay-2">Expensive cellular subscriptions required</li>
-                    <li class="slide-up reveal-delay-3">No retrofit option for older vehicles</li>
-                    <li class="slide-up reveal-delay-4">Single-point emergency alerts only</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Slide 4: Our Solution -->
-        <div class="slide">
-            <div class="slide-content centered">
-                <h2 class="title fade-in">NAVIC-Based<br>Emergency Response</h2>
-                <div class="feature-list">
-                    <p class="feature fade-in reveal-delay-1">Indigenous satellite technology</p>
-                    <p class="feature fade-in reveal-delay-2">Multi-sensor crash detection</p>
-                    <p class="feature fade-in reveal-delay-3">Retrofit-compatible design</p>
-                    <p class="feature fade-in reveal-delay-4">Multi-responder alerts</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 5: Why NAVIC -->
-        <div class="slide">
-            <div class="slide-content centered">
-                <h2 class="section-header fade-in">Positioning Accuracy Comparison</h2>
+                <h2 class="section-header fade-in">Positioning, Navigation, and Timing (PNT)</h2>
+                <p class="pnt-explanation fade-in reveal-delay-1">Satellite-based systems for location, velocity, and time</p>
                 <div class="comparison-grid">
                     <div class="comparison-row">
-                        <div class="comparison-label">Urban Areas</div>
+                        <div class="comparison-label">Accuracy</div>
                         <div class="comparison-item slide-left">GPS: 12.4m</div>
-                        <div class="comparison-item slide-right">NAVIC: 3.2m</div>
+                        <div class="comparison-item slide-right">NAVIC: ~20m (2.5m CEP with augmentation)</div>
                     </div>
                     <div class="comparison-row">
-                        <div class="comparison-label">Forest Coverage</div>
-                        <div class="comparison-item slide-left reveal-delay-1">GPS: 8.9m</div>
-                        <div class="comparison-item slide-right reveal-delay-1">NAVIC: 4.1m</div>
+                        <div class="comparison-label">Coverage</div>
+                        <div class="comparison-item slide-left reveal-delay-2">Global</div>
+                        <div class="comparison-item slide-right reveal-delay-2">India + 1500km region</div>
+                    </div>
+                    <div class="comparison-row">
+                        <div class="comparison-label">Dependency</div>
+                        <div class="comparison-item slide-left reveal-delay-3">Foreign system</div>
+                        <div class="comparison-item slide-right reveal-delay-3">Indigenous (ISRO)</div>
                     </div>
                 </div>
-                <p class="highlight fade-in reveal-delay-2">74% better accuracy in challenging terrain</p>
+                <p class="highlight fade-in reveal-delay-4">NAVIC optimized for India with strategic sovereignty advantage</p>
             </div>
         </div>
 
-        <!-- Slide 6: System Architecture -->
+        <!-- Slide 4: Project Domain & Relevance -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Simple. Reliable. Scalable.</h2>
-                <div class="flow-diagram">
-                    <div class="flow-item slide-up reveal-delay-1">Hardware Sensors</div>
-                    <div class="flow-arrow slide-up reveal-delay-2">→</div>
-                    <div class="flow-item slide-up reveal-delay-3">ESP32 Processing</div>
-                    <div class="flow-arrow slide-up reveal-delay-4">→</div>
-                    <div class="flow-item slide-up reveal-delay-5">Mobile App</div>
-                    <div class="flow-arrow slide-up reveal-delay-6">→</div>
-                    <div class="flow-item slide-up reveal-delay-7">Emergency Services</div>
+                <h2 class="section-header fade-in">Project Domain & Relevance</h2>
+                <div class="relevance-grid">
+                    <div class="relevance-item fade-in reveal-delay-1">
+                        <h3>National Context</h3>
+                        <p>Aligns with Atmanirbhar Bharat; addresses 6.2M km road network; retrofit for legacy vehicles</p>
+                    </div>
+                    <div class="relevance-item fade-in reveal-delay-2">
+                        <h3>International Context</h3>
+                        <p>Compares to EU's eCall (GPS-based); NAVIC offers cost-free, regionally superior alternative</p>
+                    </div>
+                    <div class="relevance-item fade-in reveal-delay-3">
+                        <h3>Real-World Significance</h3>
+                        <p>Reduces "golden hour" delays; potential to save lives in remote areas without cellular reliance</p>
+                    </div>
                 </div>
-                <div class="feature-list">
-                    <p class="feature fade-in reveal-delay-8">Multi-sensor fusion</p>
-                    <p class="feature fade-in reveal-delay-9">Real-time processing</p>
-                    <p class="feature fade-in reveal-delay-10">Bluetooth connectivity</p>
-                    <p class="feature fade-in reveal-delay-11">MQTT distribution</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slide 7: Hardware Components -->
-        <div class="slide">
-            <div class="slide-content centered">
-                <h2 class="section-header fade-in">Comprehensive Sensing</h2>
-                <div class="component-grid">
-                    <div class="component fade-in reveal-delay-1">
-                        <h3>ESP32 DevKit V1</h3>
-                        <p>Dual-core processing</p>
-                    </div>
-                    <div class="component fade-in reveal-delay-2">
-                        <h3>MPU-6050 IMU</h3>
-                        <p>6-axis motion detection</p>
-                    </div>
-                    <div class="component fade-in reveal-delay-3">
-                        <h3>SW-420 Vibration</h3>
-                        <p>Impact sensing</p>
-                    </div>
-                    <div class="component fade-in reveal-delay-4">
-                        <h3>NAVIC Module</h3>
-                        <p>Precise positioning</p>
-                    </div>
+                <div class="global-stats fade-in reveal-delay-4">
+                    <p>India's accident share globally: ~11%</p>
+                    <p>NAVIC coverage: India + 1500km region</p>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 8: Detection Logic -->
+        <!-- Slide 5: Problem Statement -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Multi-Criteria Detection</h2>
-                <div class="equation">
-                    <div class="equation-part fade-in reveal-delay-1">Acceleration > 4G</div>
-                    <div class="equation-operator fade-in reveal-delay-2">+</div>
-                    <div class="equation-part fade-in reveal-delay-3">Angular velocity > 150°/s</div>
-                    <div class="equation-operator fade-in reveal-delay-4">+</div>
-                    <div class="equation-part fade-in reveal-delay-5">Vibration signature</div>
-                    <div class="equation-operator fade-in reveal-delay-6">=</div>
-                    <div class="equation-result fade-in reveal-delay-7">Crash confirmed</div>
-                </div>
-                <p class="highlight fade-in reveal-delay-8">95% accuracy target</p>
-            </div>
-        </div>
-
-        <!-- Slide 9: Mobile Application -->
-        <div class="slide">
-            <div class="slide-content centered">
-                <h2 class="section-header fade-in">Two Modes. One Platform.</h2>
-                <div class="two-column">
-                    <div class="column slide-left">
-                        <h3>Publisher Mode</h3>
-                        <p class="column-subtitle">For crash victims</p>
-                        <ul>
-                            <li>BLE hardware connection</li>
-                            <li>Medical profile storage</li>
-                            <li>Automatic alert sending</li>
-                            <li>NAVIC positioning</li>
+                <h2 class="section-header fade-in">Problem Statement</h2>
+                <div class="problems-grid">
+                    <div class="problem-category fade-in reveal-delay-1">
+                        <h3>Core Problems</h3>
+                        <ul class="bullet-list">
+                            <li>High fatalities due to delayed alerts</li>
+                            <li>GPS inaccuracies in India (~100m errors in challenging terrain)</li>
+                            <li>Dependency on cellular/subscriptions</li>
+                            <li>False positives in detection</li>
+                            <li>Alert flooding</li>
                         </ul>
                     </div>
-                    <div class="column slide-right">
-                        <h3>Subscriber Mode</h3>
-                        <p class="column-subtitle">For emergency responders</p>
-                        <ul>
-                            <li>Real-time alert reception</li>
-                            <li>Geographic visualization</li>
-                            <li>Medical info display</li>
-                            <li>Multi-responder coordination</li>
+                    <div class="problem-category fade-in reveal-delay-2">
+                        <h3>Specific Gaps</h3>
+                        <ul class="bullet-list">
+                            <li>Legacy vehicles lack integration</li>
+                            <li>MQTT connectivity issues (Wi-Fi/firewall dependencies)</li>
+                            <li>Limited indigenous tech use</li>
+                            <li>No geo-decimation for redundancy</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 10: Geo-Decimation -->
+        <!-- Slide 6: Objectives -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Smart Alert Management</h2>
-                <div class="flow-diagram">
-                    <div class="flow-item slide-up reveal-delay-1">Multiple crashes</div>
-                    <div class="flow-arrow slide-up reveal-delay-2">→</div>
-                    <div class="flow-item slide-up reveal-delay-3">Intelligent clustering</div>
-                    <div class="flow-arrow slide-up reveal-delay-4">→</div>
-                    <div class="flow-item slide-up reveal-delay-5">Single coordinated alert</div>
+                <h2 class="section-header fade-in">Objectives</h2>
+                <div class="objectives-grid">
+                    <div class="objective fade-in reveal-delay-1">
+                        <h3>Primary</h3>
+                        <p>Develop a NAVIC-based retrofit crash detection system for accurate, subscription-free alerts</p>
+                    </div>
+                    <div class="objective fade-in reveal-delay-2">
+                        <h3>Secondary</h3>
+                        <p>Implement publish-subscribe via MQTT for multi-responder delivery; introduce geo-decimation for alert optimization</p>
+                    </div>
+                    <div class="objective fade-in reveal-delay-3">
+                        <h3>Long-term</h3>
+                        <p>Enable classifier models for better detection; scale to advanced NAVIC chipsets for <2.5m accuracy</p>
+                    </div>
                 </div>
-                <div class="feature-list">
-                    <p class="feature fade-in reveal-delay-6">Prevents alert flooding</p>
-                    <p class="feature fade-in reveal-delay-7">Maintains full coverage</p>
-                    <p class="feature fade-in reveal-delay-8">Optimizes emergency response</p>
-                </div>
-                <p class="highlight fade-in reveal-delay-9">75% reduction in redundant alerts</p>
+                <p class="highlight fade-in reveal-delay-4">Link to real-world impact: reducing 180,000 fatalities annually</p>
             </div>
         </div>
 
-        <!-- Slide 11: Testing Platform -->
+        <!-- Slide 7: Scope of the Project -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Safe Validation</h2>
-                <ul class="bullet-list">
-                    <li class="slide-up reveal-delay-1">RC car prototype</li>
-                    <li class="slide-up reveal-delay-2">Metallic body simulation</li>
-                    <li class="slide-up reveal-delay-3">Controlled impact testing</li>
-                    <li class="slide-up reveal-delay-4">Real-world conditions</li>
-                </ul>
-                <p class="highlight fade-in reveal-delay-5">End-to-end system validation</p>
+                <h2 class="section-header fade-in">Scope of the Project</h2>
+                <div class="scope-grid">
+                    <div class="scope-category fade-in reveal-delay-1">
+                        <h3>In-Scope</h3>
+                        <ul class="bullet-list">
+                            <li>Hardware (ESP32, SW-420, MPU-6050, NAVIC GNSS)</li>
+                            <li>Android app (Kotlin, Publisher/Subscriber modes)</li>
+                            <li>MQTT integration</li>
+                            <li>RC car prototype testing</li>
+                        </ul>
+                    </div>
+                    <div class="scope-category fade-in reveal-delay-2">
+                        <h3>Out-of-Scope</h3>
+                        <ul class="bullet-list">
+                            <li>Full-scale vehicle deployment</li>
+                            <li>Advanced ML classifiers (future work)</li>
+                            <li>Non-Indian terrains</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="highlight fade-in reveal-delay-3">Focus on India-specific constraints (cost, infrastructure); retrofit for legacy vehicles</p>
             </div>
         </div>
 
-        <!-- Slide 12: Performance Results -->
+        <!-- Slide 8: Proposed Methodology & System Architecture -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Validation Success</h2>
-                <div class="metrics-grid">
-                    <div class="metric fade-in reveal-delay-1">
-                        <h3>Detection Accuracy</h3>
-                        <p>94% sensitivity achieved</p>
+                <h2 class="section-header fade-in">Proposed Methodology & System Architecture</h2>
+                <div class="methodology-content">
+                    <div class="methodology-section fade-in reveal-delay-1">
+                        <h3>Methodology</h3>
+                        <ul class="bullet-list">
+                            <li>Multi-sensor fusion (vibration + inertial) for detection</li>
+                            <li>NAVIC for positioning</li>
+                            <li>BLE to app</li>
+                            <li>MQTT pub/sub for alerts</li>
+                            <li>Geo-decimation (geohash clustering)</li>
+                        </ul>
                     </div>
-                    <div class="metric fade-in reveal-delay-2">
-                        <h3>System Response</h3>
-                        <p>&lt;8 seconds end-to-end</p>
-                    </div>
-                    <div class="metric fade-in reveal-delay-3">
-                        <h3>Communication Reliability</h3>
-                        <p>99.2% message delivery</p>
-                    </div>
-                    <div class="metric fade-in reveal-delay-4">
-                        <h3>NAVIC Advantage</h3>
-                        <p>54% better positioning accuracy</p>
+                    <div class="methodology-section fade-in reveal-delay-2">
+                        <h3>Architecture Steps</h3>
+                        <ul class="bullet-list">
+                            <li>Threshold-based logic for crashes</li>
+                            <li>JSON payloads with coordinates/medical info</li>
+                            <li>Hardware stack → BLE → Android Publisher → MQTT Broker → Subscribers</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 13: Competitive Advantages -->
+        <!-- Slide 8.5: System Architecture Diagram -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Superior Approach</h2>
-                <table class="comparison-table fade-in reveal-delay-1">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Our System</th>
-                            <th>Others</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="slide-up reveal-delay-2">
-                            <td>Cost</td>
-                            <td>One-time</td>
-                            <td>Subscription</td>
-                        </tr>
-                        <tr class="slide-up reveal-delay-3">
-                            <td>Compatibility</td>
-                            <td>Legacy cars</td>
-                            <td>New cars only</td>
-                        </tr>
-                        <tr class="slide-up reveal-delay-4">
-                            <td>Positioning</td>
-                            <td>NAVIC</td>
-                            <td>GPS</td>
-                        </tr>
-                        <tr class="slide-up reveal-delay-5">
-                            <td>Alerts</td>
-                            <td>Multiple</td>
-                            <td>Single point</td>
-                        </tr>
-                        <tr class="slide-up reveal-delay-6">
-                            <td>Management</td>
-                            <td>Smart</td>
-                            <td>Basic</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <h2 class="section-header fade-in">System Architecture Diagram</h2>
+                <div class="architecture-container fade-in reveal-delay-1">
+                    <div class="mermaid" id="architecture-diagram">
+                        graph TD
+                            subgraph A[Hardware Sensor Node]
+                                direction LR
+                                SW420["SW-420<br>(Vibration Sensor)"]
+                                MPU6050["MPU-6050<br>(Gyro/Accel)"]
+                                NAVIC["NAVIC Module<br>(Location)"]
+                                ESP32["ESP32 MCU"]
+                            end
+
+                            subgraph B[Publisher]
+                                AndroidPub["Android Device<br>(Publisher Mode)"]
+                            end
+
+                            subgraph C[Broker]
+                                MQTT["MQTT Broker"]
+                            end
+
+                            subgraph D[Subscribers]
+                                direction LR
+                                AndroidSub1["Android Device<br>(Subscriber 1)"]
+                                AndroidSub2["Android Device<br>(Subscriber 2)"]
+                                AndroidSubN["...More Devices"]
+                            end
+
+                            %% Data Flow & Connections
+                            SW420 -- "Sensor Data" --> ESP32
+                            MPU6050 -- "Sensor Data" --> ESP32
+                            NAVIC -- "GPS Data" --> ESP32
+                            ESP32 -- "Bluetooth" --> AndroidPub
+                            AndroidPub -- "WiFi" --> MQTT
+                            MQTT -- "Data Topic" --> AndroidSub1
+                            MQTT -- "Data Topic" --> AndroidSub2
+                            MQTT -- "Data Topic" --> AndroidSubN
+
+                            %% Styling
+                            classDef sensorNode fill:#f0f4f8,stroke:#b0c4de,stroke-width:2px,color:#333
+                            classDef mcuNode fill:#d6eaf8,stroke:#85c1e9,stroke-width:2px,color:#333
+                            classDef pubNode fill:#e9ecef,stroke:#adb5bd,stroke-width:2px,color:#333
+                            classDef brokerNode fill:#ced4da,stroke:#6c757d,stroke-width:2px,color:#333
+                            classDef subNode fill:#f8f9fa,stroke:#dee2e6,stroke-width:2px,color:#333
+                            
+                            class SW420,MPU6050,NAVIC sensorNode
+                            class ESP32 mcuNode
+                            class AndroidPub pubNode
+                            class MQTT brokerNode
+                            class AndroidSub1,AndroidSub2,AndroidSubN subNode
+                    </div>
+                </div>
+                <p class="highlight fade-in reveal-delay-2">Data Flow from Hardware Sensors to Subscriber Devices</p>
             </div>
         </div>
 
-        <!-- Slide 14: Impact & Future -->
+        <!-- Slide 9: Work Progress -->
         <div class="slide">
             <div class="slide-content centered">
-                <h2 class="section-header fade-in">Foundation for the Future</h2>
-                <div class="feature-list">
-                    <p class="feature fade-in reveal-delay-1">Indigenous technology adoption</p>
-                    <p class="feature fade-in reveal-delay-2">Enhanced emergency response</p>
-                    <p class="feature fade-in reveal-delay-3">Reduced accident fatalities</p>
-                    <p class="feature fade-in reveal-delay-4">Cost-effective safety solutions</p>
+                <h2 class="section-header fade-in">Work Progress</h2>
+                <div class="progress-grid">
+                    <div class="progress-category fade-in reveal-delay-1">
+                        <h3>Completed</h3>
+                        <ul class="bullet-list">
+                            <li>Hardware assembly (ESP32 stack)</li>
+                            <li>Android app development (debugging phase)</li>
+                            <li>Initial sensor programming</li>
+                        </ul>
+                    </div>
+                    <div class="progress-category fade-in reveal-delay-2">
+                        <h3>Ongoing</h3>
+                        <ul class="bullet-list">
+                            <li>MQTT connectivity (pub/sub establishment)</li>
+                            <li>BLE integration for ESP-app data transfer</li>
+                            <li>Troubleshooting Wi-Fi/firewall issues</li>
+                        </ul>
+                    </div>
+                    <div class="progress-category fade-in reveal-delay-3">
+                        <h3>Pending</h3>
+                        <ul class="bullet-list">
+                            <li>NAVIC data sending via BLE</li>
+                            <li>RC car crash simulations for threshold recording</li>
+                            <li>Basic math logic for detection</li>
+                        </ul>
+                    </div>
                 </div>
-                <p class="highlight fade-in reveal-delay-5">Ready for nationwide deployment</p>
-                <div class="closing fade-in reveal-delay-6">
-                    <p class="closing-text">Building safer roads<br>with smarter technology</p>
+                <p class="highlight fade-in reveal-delay-4">50% complete - Learning curve from data analytics to IoT</p>
+            </div>
+        </div>
+
+        <!-- Slide 10: Challenges Encountered -->
+        <div class="slide">
+            <div class="slide-content centered">
+                <h2 class="section-header fade-in">Challenges Encountered</h2>
+                <div class="challenges-grid">
+                    <div class="challenge-category fade-in reveal-delay-1">
+                        <h3>Technical Challenges</h3>
+                        <ul class="bullet-list">
+                            <li>MQTT failures on college network (firewalls)</li>
+                            <li>New to IoT programming (boards, chipsets)</li>
+                            <li>Sensor false positives</li>
+                            <li>NAVIC signal in testing environments</li>
+                        </ul>
+                    </div>
+                    <div class="challenge-category fade-in reveal-delay-2">
+                        <h3>Resolutions</h3>
+                        <ul class="bullet-list">
+                            <li>Debugging MQTT for real-time reliability</li>
+                            <li>Leveraging analytics background for threshold logic</li>
+                            <li>Iterative testing and calibration</li>
+                            <li>Network configuration optimization</li>
+                        </ul>
+                    </div>
                 </div>
+                <p class="highlight fade-in reveal-delay-3">Transparent but positive - showing growth and learning</p>
+            </div>
+        </div>
+
+        <!-- Slide 11: Results & Expected Outcomes -->
+        <div class="slide">
+            <div class="slide-content centered">
+                <h2 class="section-header fade-in">Results & Expected Outcomes</h2>
+                <div class="results-grid">
+                    <div class="result-category fade-in reveal-delay-1">
+                        <h3>Preliminary Results</h3>
+                        <ul class="bullet-list">
+                            <li>Android app functional</li>
+                            <li>MQTT enables sub-second alerts (faster than cellular)</li>
+                            <li>Hardware integration successful</li>
+                        </ul>
+                    </div>
+                    <div class="result-category fade-in reveal-delay-2">
+                        <h3>Expected Outcomes</h3>
+                        <ul class="bullet-list">
+                            <li><10m accuracy via NAVIC</li>
+                            <li>Reduced alert redundancy</li>
+                            <li>Cost-effective safety for legacy vehicles</li>
+                            <li>National adoption potential</li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="highlight fade-in reveal-delay-3">Next Steps: Complete MQTT/BLE; Implement thresholds; Future: ML classifier, advanced chipsets</p>
+            </div>
+        </div>
+
+        <!-- Slide 12: Conclusions -->
+        <div class="slide">
+            <div class="slide-content centered">
+                <h2 class="section-header fade-in">Conclusions</h2>
+                <div class="conclusions-content">
+                    <div class="conclusion-section fade-in reveal-delay-1">
+                        <h3>Summary</h3>
+                        <p>Project demonstrates NAVIC's role in indigenous crash detection, addressing real-world gaps in India's road safety ecosystem</p>
+                    </div>
+                    <div class="conclusion-section fade-in reveal-delay-2">
+                        <h3>Key Takeaways</h3>
+                        <ul class="bullet-list">
+                            <li>Retrofit solution for India's safety needs</li>
+                            <li>Path to scalable deployment</li>
+                            <li>Indigenous technology advantage</li>
+                        </ul>
+                    </div>
+                    <div class="conclusion-section fade-in reveal-delay-3">
+                        <h3>Call to Action</h3>
+                        <p>Feedback on MQTT/NAVIC integration; collaboration opportunities for nationwide deployment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: References -->
+        <div class="slide">
+            <div class="slide-content centered">
+                <h2 class="section-header fade-in">References</h2>
+                <div class="references-content">
+                    <ul class="bullet-list">
+                        <li class="fade-in reveal-delay-1">Project documentation and technical specifications</li>
+                        <li class="fade-in reveal-delay-2">MoRTH 2024 reports (~180,000 fatalities)</li>
+                        <li class="fade-in reveal-delay-3">ISRO NAVIC updates (2025) - 2.5m CEP with augmentation</li>
+                        <li class="fade-in reveal-delay-4">Literature review: Thompson 2019, relevant IoT crash detection papers</li>
+                        <li class="fade-in reveal-delay-5">EU eCall system specifications and GPS limitations</li>
+                    </ul>
+                </div>
+                <p class="highlight fade-in reveal-delay-6">Format: IEEE citation style</p>
             </div>
         </div>
     </div>
@@ -300,7 +394,7 @@
     <!-- Navigation -->
     <div class="navigation">
         <button id="prevBtn" class="nav-btn">‹</button>
-        <span id="slideCounter">1 / 14</span>
+        <span id="slideCounter">1 / 13</span>
         <button id="nextBtn" class="nav-btn">›</button>
     </div>
 

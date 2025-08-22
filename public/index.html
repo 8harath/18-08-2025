@@ -1,16 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>NAVIC-Based Crash Detection System</title>
-	<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-	<div class="slideshow-container">
-		<!-- Slide 1: Title -->
-		<div class="slide active">
 			<div class="slide-content centered">
 				<h1 class="title fade-in">NAVIC-Based<br>Crash Detection System</h1>
 				<p class="subtitle fade-in reveal-delay-1">Geo-Decimation Framework for Legacy Vehicles</p>
@@ -104,6 +92,66 @@
 					<p class="feature fade-in reveal-delay-10">Bluetooth connectivity</p>
 					<p class="feature fade-in reveal-delay-11">MQTT distribution</p>
 				</div>
+			</div>
+		</div>
+
+		<!-- Slide 6b: Detailed System Architecture Diagram -->
+		<div class="slide">
+			<div class="slide-content centered">
+				<h2 class="section-header fade-in">System Architecture Diagram</h2>
+				<p class="subtitle fade-in reveal-delay-1">Data Flow from Hardware Sensors to Subscriber Devices</p>
+				<div class="mermaid fade-in reveal-delay-2" style="margin:0 auto;max-width:900px;">
+					graph TD
+						subgraph A[Hardware Sensor Node]
+							direction LR
+							SW420["<i class='fa fa-vibrating'></i> SW-420<br>(Vibration Sensor)"]
+							MPU6050["<i class='fa fa-compass'></i> MPU-6050<br>(Gyro/Accel)"]
+							NAVIC["<i class='fa fa-satellite-dish'></i> NAVIC Module<br>(Location)"]
+							ESP32["<i class='fa fa-microchip'></i> ESP32 MCU"]
+						end
+
+						subgraph B[Publisher]
+							AndroidPub["<i class='fa fa-mobile-alt'></i> Android Device<br>(Publisher Mode)"]
+						end
+
+						subgraph C[Broker]
+							MQTT["<i class='fa fa-server'></i> MQTT Broker"]
+						end
+
+						subgraph D[Subscribers]
+							direction LR
+							AndroidSub1["<i class='fa fa-mobile-alt'></i> Android Device<br>(Subscriber 1)"]
+							AndroidSub2["<i class='fa fa-mobile-alt'></i> Android Device<br>(Subscriber 2)"]
+							AndroidSubN["<i class='fa fa-ellipsis-h'></i><br>...More Devices"]
+						end
+
+						%% Data Flow & Connections
+						SW420 -- "Sensor Data" --> ESP32
+						MPU6050 -- "Sensor Data" --> ESP32
+						NAVIC -- "GPS Data" --> ESP32
+						ESP32 -- "<i class='fab fa-bluetooth-b'></i> Bluetooth" --> AndroidPub
+						AndroidPub -- "<i class='fa fa-wifi'></i> WiFi" --> MQTT
+						MQTT -- "Data Topic" --> AndroidSub1
+						MQTT -- "Data Topic" --> AndroidSub2
+						MQTT -- "Data Topic" --> AndroidSubN
+
+						%% Styling
+						classDef sensorNode fill:#f0f4f8,stroke:#b0c4de,stroke-width:2px,color:#333
+						classDef mcuNode fill:#d6eaf8,stroke:#85c1e9,stroke-width:2px,color:#333
+						classDef pubNode fill:#e9ecef,stroke:#adb5bd,stroke-width:2px,color:#333
+						classDef brokerNode fill:#ced4da,stroke:#6c757d,stroke-width:2px,color:#333
+						classDef subNode fill:#f8f9fa,stroke:#dee2e6,stroke-width:2px,color:#333
+						class SW420,MPU6050,NAVIC sensorNode
+						class ESP32 mcuNode
+						class AndroidPub pubNode
+						class MQTT brokerNode
+						class AndroidSub1,AndroidSub2,AndroidSubN subNode
+				</div>
+				<!-- Mermaid.js CDN for rendering -->
+				<script type="module">
+					import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+					mermaid.initialize({ startOnLoad: true });
+				</script>
 			</div>
 		</div>
 

@@ -17,6 +17,21 @@ class AppleSlideshow {
     this.updateNavButtons()
     this.bindEvents()
     this.resetAnimations()
+    this.initMermaid()
+  }
+
+  initMermaid() {
+    // Initialize Mermaid diagrams
+    if (typeof mermaid !== 'undefined') {
+      mermaid.initialize({ 
+        startOnLoad: true,
+        theme: 'default',
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true
+        }
+      })
+    }
   }
 
   bindEvents() {
