@@ -1,8 +1,13 @@
 {
-  "name": "my-v0-project",
-  "version": "0.1.0",
+  "name": "navic-road-accident-alerts-presentation",
+  "version": "1.0.0",
   "private": true,
+  "description": "Geo-Decimation of Road Accident Alerts: A NAVIC-Based Publish-Subscribe Framework Presentation",
   "scripts": {
-    "build": "echo 'no build script'"
-  }
+    "build": "echo 'Static presentation - no build required'",
+    "start": "echo 'Deploy to Vercel for live preview'"
+  },
+  "keywords": ["presentation", "navic", "iot", "road-safety", "crash-detection"],
+  "author": "IIT Tirupati",
+  "license": "MIT"
 }
