@@ -2,7 +2,7 @@
   "name": "navic-road-accident-alerts-presentation",
   "version": "1.0.0",
   "private": true,
-  "description": "Geo-Decimation of Road Accident Alerts: A NAVIC-Based Publish-Subscribe Framework Presentation",
+  "description": "Geo-Dissemination of Road Accident Alerts: A NAVIC-Based Publish-Subscribe Framework Presentation",
   "scripts": {
     "build": "echo 'Static presentation - no build required'",
     "start": "echo 'Deploy to Vercel for live preview'"
