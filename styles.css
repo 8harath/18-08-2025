@@ -886,6 +886,7 @@ body {
   border-radius: 16px;
   border: 2px solid #e2e8f0;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  text-align: center;
 }
 
 .conclusion-section:hover {
@@ -899,12 +900,121 @@ body {
   font-weight: 700;
   margin-bottom: 15px;
   color: #1a1a1a;
+  text-align: center;
+}
+
+.conclusion-icon {
+  font-size: 48px;
+  color: #3182ce;
+  margin-bottom: 20px;
+  text-align: center;
+  animation: conclusionPulse 3s ease-in-out infinite;
+}
+
+@keyframes conclusionPulse {
+  0%, 100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) translateY(-5px);
+    opacity: 0.9;
+  }
+}
+
+.impact-metric {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: linear-gradient(135deg, #38a169, #2f855a);
+  border-radius: 12px;
+  color: white;
+}
+
+.metric-number {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 5px;
+}
+
+.metric-label {
+  font-size: 16px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.achievement-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #d69e2e, #b7791f);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+  animation: badgeGlow 2s ease-in-out infinite;
+}
+
+@keyframes badgeGlow {
+  0%, 100% {
+    box-shadow: 0 0 10px rgba(214, 158, 46, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(214, 158, 46, 0.6);
+  }
+}
+
+.collaboration-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #3182ce, #2b6cb0);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: ctaPulse 2.5s ease-in-out infinite;
+}
+
+.collaboration-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(49, 130, 206, 0.3);
+}
+
+@keyframes ctaPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 .conclusion-section p {
   font-size: 20px;
   color: #4a5568;
   line-height: 1.5;
+}
+
+.conclusion-section .bullet-list {
+  text-align: center;
+}
+
+.conclusion-section .bullet-list li {
+  text-align: center;
+  padding-left: 0;
+}
+
+.conclusion-section .bullet-list li::before {
+  display: none;
 }
 
 /* Enhanced Architecture Container - Desktop Layout */
@@ -1020,6 +1130,10 @@ body {
   color: #e53e3e;
   margin-bottom: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   animation: categoryCenterPulse 3s ease-in-out infinite;
 }
 
@@ -1039,6 +1153,11 @@ body {
   font-size: 48px;
   color: #3182ce;
   margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   animation: objectiveBounce 3s ease-in-out infinite;
 }
 
@@ -1060,6 +1179,10 @@ body {
   color: #38a169;
   margin-bottom: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   animation: scopePulse 2.5s ease-in-out infinite;
 }
 
@@ -1073,6 +1196,10 @@ body {
   color: #3182ce;
   margin-bottom: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   animation: methodologyBounce 3s ease-in-out infinite;
 }
 
@@ -1082,6 +1209,10 @@ body {
   color: #38a169;
   margin-bottom: 20px;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   animation: progressPulse 2.5s ease-in-out infinite;
 }
 
@@ -1131,19 +1262,29 @@ body {
 
 .progress-category:nth-child(2) .progress-icon {
   color: #d69e2e;
-  animation: progressSpin 3s linear infinite;
+  animation: progressSmoothPulse 2s ease-in-out infinite;
 }
 
 .progress-category:nth-child(3) .progress-icon {
   color: #718096;
 }
 
-@keyframes progressSpin {
-  from {
-    transform: rotate(0deg);
+@keyframes progressSmoothPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: scale(1.05) rotate(90deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: scale(1.05) rotate(270deg);
+    opacity: 0.9;
   }
 }
 
@@ -1176,6 +1317,8 @@ body {
   margin-right: 10px;
   color: #3182ce;
   animation: statsPulse 2.5s ease-in-out infinite;
+  display: inline-block;
+  text-align: center;
 }
 
 @keyframes statsPulse {
