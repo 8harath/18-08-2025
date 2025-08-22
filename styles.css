@@ -188,6 +188,8 @@ body {
   text-align: center;
   font-weight: 500;
   line-height: 1.5;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .motivation {
@@ -652,6 +654,7 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   color: #1a1a1a;
+  text-align: center;
 }
 
 /* Enhanced Progress Grid - Desktop Layout */
@@ -730,6 +733,7 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   color: #1a1a1a;
+  text-align: center;
 }
 
 /* Enhanced Methodology Content - Desktop Layout */
@@ -763,6 +767,7 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   color: #1a1a1a;
+  text-align: center;
 }
 
 /* Enhanced Challenges Grid - Left-Right Layout */
@@ -1054,6 +1059,7 @@ body {
   font-size: 48px;
   color: #38a169;
   margin-bottom: 20px;
+  text-align: center;
   animation: scopePulse 2.5s ease-in-out infinite;
 }
 
@@ -1066,6 +1072,7 @@ body {
   font-size: 48px;
   color: #3182ce;
   margin-bottom: 20px;
+  text-align: center;
   animation: methodologyBounce 3s ease-in-out infinite;
 }
 
@@ -1074,7 +1081,52 @@ body {
   font-size: 48px;
   color: #38a169;
   margin-bottom: 20px;
+  text-align: center;
   animation: progressPulse 2.5s ease-in-out infinite;
+}
+
+/* Progress Bar Container */
+.progress-bar-container {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 4px;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.progress-bar-fill.completed {
+  background: linear-gradient(90deg, #38a169, #2f855a);
+  width: 100%;
+}
+
+.progress-bar-fill.in-progress {
+  background: linear-gradient(90deg, #d69e2e, #b7791f);
+  width: 65%;
+}
+
+.progress-bar-fill.upcoming {
+  background: linear-gradient(90deg, #718096, #4a5568);
+  width: 0%;
+}
+
+.progress-bar-fill::after {
+  content: attr(data-percentage) '%';
+  position: absolute;
+  right: 5px;
+  top: -25px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 .progress-category:nth-child(2) .progress-icon {
