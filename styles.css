@@ -51,14 +51,35 @@ body {
   animation: logoEntrance 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
+.logo-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
 .iit-logo {
-  width: 200px;
+  width: 400px;
   height: auto;
   filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.15));
   transition: all 0.3s ease;
 }
 
 .iit-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.2));
+}
+
+.project-screenshot {
+  width: 400px;
+  height: auto;
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.15));
+  transition: all 0.3s ease;
+  border-radius: 12px;
+}
+
+.project-screenshot:hover {
   transform: scale(1.05);
   filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.2));
 }
@@ -466,6 +487,7 @@ body {
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   overflow: hidden;
+  text-align: center;
 }
 
 .problem-category::before {
@@ -495,6 +517,20 @@ body {
   font-weight: 700;
   margin-bottom: 20px;
   color: #1a1a1a;
+  text-align: center;
+}
+
+.problem-category .bullet-list {
+  text-align: center;
+}
+
+.problem-category .bullet-list li {
+  text-align: center;
+  padding-left: 0;
+}
+
+.problem-category .bullet-list li::before {
+  display: none;
 }
 
 /* Enhanced Objectives Grid - Desktop Layout */
@@ -959,15 +995,17 @@ body {
   font-size: 48px;
   color: #3182ce;
   margin-bottom: 20px;
-  animation: relevanceRotate 6s linear infinite;
+  animation: relevancePulse 3s ease-in-out infinite;
 }
 
-@keyframes relevanceRotate {
-  from {
-    transform: rotate(0deg);
+@keyframes relevancePulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
   }
 }
 
@@ -976,16 +1014,17 @@ body {
   font-size: 48px;
   color: #e53e3e;
   margin-bottom: 20px;
-  animation: categoryPulse 2.5s ease-in-out infinite;
+  text-align: center;
+  animation: categoryCenterPulse 3s ease-in-out infinite;
 }
 
-@keyframes categoryPulse {
+@keyframes categoryCenterPulse {
   0%, 100% {
-    transform: scale(1);
+    transform: scale(1) translateY(0);
     opacity: 1;
   }
   50% {
-    transform: scale(1.15);
+    transform: scale(1.1) translateY(-5px);
     opacity: 0.9;
   }
 }
@@ -1328,7 +1367,12 @@ body {
     font-size: 42px;
   }
 
-  .iit-logo {
+  .logo-images {
+    gap: 40px;
+  }
+  
+  .iit-logo,
+  .project-screenshot {
     width: 180px;
   }
 
@@ -1384,7 +1428,12 @@ body {
     font-size: 28px;
   }
 
-  .iit-logo {
+  .logo-images {
+    gap: 30px;
+  }
+  
+  .iit-logo,
+  .project-screenshot {
     width: 140px;
   }
 
