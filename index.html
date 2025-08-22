@@ -273,118 +273,9 @@
             </div>
         </div>
 
-        <!-- Slide 8.5: System Architecture Diagram -->
-        <div class="slide">
-            <div class="slide-content">
-                <h2 class="section-header fade-in">System Architecture Diagram</h2>
-                <div class="architecture-container fade-in reveal-delay-1">
-                    <div class="mermaid" id="architecture-diagram">
-                        graph TD
-                            subgraph A[Hardware Sensor Node]
-                                direction LR
-                                SW420["SW-420<br>(Vibration Sensor)"]
-                                MPU6050["MPU-6050<br>(Gyro/Accel)"]
-                                NAVIC["NAVIC Module<br>(Location)"]
-                                ESP32["ESP32 MCU"]
-                            end
 
-                            subgraph B[Publisher]
-                                AndroidPub["Android Device<br>(Publisher Mode)"]
-                            end
 
-                            subgraph C[Broker]
-                                MQTT["MQTT Broker"]
-                            end
 
-                            subgraph D[Subscribers]
-                                direction LR
-                                AndroidSub1["Android Device<br>(Subscriber 1)"]
-                                AndroidSub2["Android Device<br>(Subscriber 2)"]
-                                AndroidSubN["...More Devices"]
-                            end
-
-                            %% Data Flow & Connections
-                            SW420 -- "Sensor Data" --> ESP32
-                            MPU6050 -- "Sensor Data" --> ESP32
-                            NAVIC -- "GPS Data" --> ESP32
-                            ESP32 -- "Bluetooth" --> AndroidPub
-                            AndroidPub -- "WiFi" --> MQTT
-                            MQTT -- "Data Topic" --> AndroidSub1
-                            MQTT -- "Data Topic" --> AndroidSub2
-                            MQTT -- "Data Topic" --> AndroidSubN
-
-                            %% Styling
-                            classDef sensorNode fill:#f0f4f8,stroke:#b0c4de,stroke-width:2px,color:#333
-                            classDef mcuNode fill:#d6eaf8,stroke:#85c1e9,stroke-width:2px,color:#333
-                            classDef pubNode fill:#e9ecef,stroke:#adb5bd,stroke-width:2px,color:#333
-                            classDef brokerNode fill:#ced4da,stroke:#6c757d,stroke-width:2px,color:#333
-                            classDef subNode fill:#f8f9fa,stroke:#dee2e6,stroke-width:2px,color:#333
-                            
-                            class SW420,MPU6050,NAVIC sensorNode
-                            class ESP32 mcuNode
-                            class AndroidPub pubNode
-                            class MQTT brokerNode
-                            class AndroidSub1,AndroidSub2,AndroidSubN subNode
-                    </div>
-                </div>
-                <p class="highlight fade-in reveal-delay-2">Data Flow from Hardware Sensors to Subscriber Devices</p>
-            </div>
-        </div>
-
-        <!-- Slide 9: Work Progress -->
-        <div class="slide">
-            <div class="slide-content">
-                <div class="slide-header fade-in">
-                    <i class="fas fa-tasks"></i>
-                    <h2 class="section-header">Work Progress</h2>
-                </div>
-                <div class="progress-grid">
-                    <div class="progress-category fade-in reveal-delay-1">
-                        <div class="progress-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h3>Completed</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar-fill completed" data-percentage="100"></div>
-                        </div>
-                        <ul class="bullet-list">
-                            <li>Hardware assembly (ESP32 stack)</li>
-                            <li>Android app development (debugging phase)</li>
-                            <li>Initial sensor programming</li>
-                        </ul>
-                    </div>
-                    <div class="progress-category fade-in reveal-delay-2">
-                        <div class="progress-icon">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3>In Progress</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar-fill in-progress" data-percentage="65"></div>
-                        </div>
-                        <ul class="bullet-list">
-                            <li>MQTT connectivity (pub/sub establishment)</li>
-                            <li>BLE integration for ESP-app data transfer</li>
-                            <li>Troubleshooting Wi-Fi/firewall issues</li>
-                        </ul>
-                    </div>
-                    <div class="progress-category fade-in reveal-delay-3">
-                        <div class="progress-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Upcoming</h3>
-                        <div class="progress-bar-container">
-                            <div class="progress-bar-fill upcoming" data-percentage="0"></div>
-                        </div>
-                        <ul class="bullet-list">
-                            <li>NAVIC data sending via BLE</li>
-                            <li>RC car crashes simulations for threshold recording</li>
-                            <li>Basic math logic for detection</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
 
         <!-- Slide 10: Challenges Encountered -->
         <div class="slide">
@@ -471,22 +362,21 @@
             </div>
         </div>
 
-        <!-- Slide 13: References -->
+        <!-- Slide 13: Thank You -->
         <div class="slide">
-            <div class="slide-content">
-                <h2 class="section-header fade-in">References</h2>
-                <div class="references-content">
-                    <ul class="bullet-list">
-                        <li class="fade-in reveal-delay-1">Project documentation and technical specifications</li>
-                        <li class="fade-in reveal-delay-2">MoRTH 2024 reports (~180,000 fatalities)</li>
-                        <li class="fade-in reveal-delay-3">ISRO NAVIC updates (2025) - 2.5m CEP with augmentation</li>
-                        <li class="fade-in reveal-delay-4">Literature review: Thompson 2019, relevant IoT crash detection papers</li>
-                        <li class="fade-in reveal-delay-5">EU eCall system specifications and GPS limitations</li>
-                    </ul>
+            <div class="slide-content centered">
+                <div class="thank-you-icon fade-in">
+                    <i class="fas fa-heart"></i>
                 </div>
-                <p class="highlight fade-in reveal-delay-6">Format: IEEE citation style</p>
+                <h2 class="thank-you-title fade-in reveal-delay-1">Thank You!</h2>
+                <p class="thank-you-message fade-in reveal-delay-2">For your attention and valuable feedback</p>
+                <div class="contact-info fade-in reveal-delay-3">
+                    <p><i class="fas fa-envelope"></i> Questions & Discussion</p>
+                </div>
             </div>
         </div>
+
+
     </div>
 
     <!-- Top Navigation Progress Bar -->
@@ -494,7 +384,7 @@
         <div class="top-progress-bar">
             <div class="top-progress" id="topProgress"></div>
         </div>
-        <div class="top-slide-counter" id="topSlideCounter">1 / 13</div>
+        <div class="top-slide-counter" id="topSlideCounter">1 / 11</div>
     </div>
 
     <!-- Progress bar -->
