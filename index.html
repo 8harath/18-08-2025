@@ -7,22 +7,27 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="slideshow-container">
         <!-- Slide 1: Title -->
         <div class="slide active">
             <div class="slide-content centered">
-                <div class="title-icon fade-in">
+                <div class="logo-container fade-in">
+                    <img src="public/Logo.png" alt="IIT Tirupati Logo" class="iit-logo">
+                </div>
+                <div class="title-icon fade-in reveal-delay-1">
                     <i class="fas fa-satellite-dish"></i>
                 </div>
-                <h1 class="title fade-in">Geo-Decimation of Road Accident Alerts</h1>
-                <h2 class="subtitle fade-in reveal-delay-1">A NAVIC-Based Publish-Subscribe Framework</h2>
-                <p class="caption fade-in reveal-delay-2">Indigenous IoT Solution for Retrofit Crash Detection in Legacy Vehicles</p>
-                <p class="tagline fade-in reveal-delay-3">Leveraging NAVIC for Real-Time Emergency Response in India's Road Safety Ecosystem</p>
-                <div class="author-info fade-in reveal-delay-4">
-                    <p><i class="fas fa-user-graduate"></i> Your Name, IIT Tirupati</p>
-                    <p><i class="fas fa-calendar-alt"></i> August 2025</p>
+                <h1 class="title fade-in reveal-delay-2">Geo-Decimation of Road Accident Alerts</h1>
+                <h2 class="subtitle fade-in reveal-delay-3">A NAVIC-Based Publish-Subscribe Framework</h2>
+                <p class="caption fade-in reveal-delay-4">Indigenous IoT Solution for Retrofit Crash Detection in Legacy Vehicles</p>
+                <p class="tagline fade-in reveal-delay-5">Leveraging NAVIC for Real-Time Emergency Response in India's Road Safety Ecosystem</p>
+                <div class="author-info fade-in reveal-delay-6">
+                    <p class="author-name"><i class="fas fa-user-graduate"></i> Bharath K</p>
+                    <p class="institution"><i class="fas fa-university"></i> Indian Institute of Technology, Tirupati</p>
+                    <p class="date"><i class="fas fa-calendar-alt"></i> August 2025</p>
                 </div>
             </div>
         </div>
@@ -377,99 +382,91 @@
 
         <!-- Slide 10: Challenges Encountered -->
         <div class="slide">
-            <div class="slide-content centered">
-                <h2 class="section-header fade-in">Challenges Encountered</h2>
-                <div class="challenges-grid">
-                    <div class="challenge-category fade-in reveal-delay-1">
-                        <h3>Technical Challenges</h3>
-                        <ul class="bullet-list">
-                            <li>MQTT failures on college network (firewalls)</li>
-                            <li>New to IoT programming (boards, chipsets)</li>
-                            <li>Sensor false positives</li>
-                            <li>NAVIC signal in testing environments</li>
-                        </ul>
-                    </div>
-                    <div class="challenge-category fade-in reveal-delay-2">
-                        <h3>Resolutions</h3>
-                        <ul class="bullet-list">
-                            <li>Debugging MQTT for real-time reliability</li>
-                            <li>Leveraging analytics background for threshold logic</li>
-                            <li>Iterative testing and calibration</li>
-                            <li>Network configuration optimization</li>
-                        </ul>
-                    </div>
+            <h2 class="section-header fade-in">Challenges Encountered</h2>
+            <div class="challenges-grid">
+                <div class="challenge-category fade-in reveal-delay-1">
+                    <h3>Technical Challenges</h3>
+                    <ul class="bullet-list">
+                        <li>MQTT failures on college network (firewalls)</li>
+                        <li>New to IoT programming (boards, chipsets)</li>
+                        <li>Sensor false positives</li>
+                        <li>NAVIC signal in testing environments</li>
+                    </ul>
                 </div>
-                <p class="highlight fade-in reveal-delay-3">Transparent but positive - showing growth and learning</p>
+                <div class="challenge-category fade-in reveal-delay-2">
+                    <h3>Resolutions</h3>
+                    <ul class="bullet-list">
+                        <li>Debugging MQTT for real-time reliability</li>
+                        <li>Leveraging analytics background for threshold logic</li>
+                        <li>Iterative testing and calibration</li>
+                        <li>Network configuration optimization</li>
+                    </ul>
+                </div>
             </div>
+            <p class="highlight fade-in reveal-delay-3">Transparent but positive - showing growth and learning</p>
         </div>
 
         <!-- Slide 11: Results & Expected Outcomes -->
         <div class="slide">
-            <div class="slide-content centered">
-                <h2 class="section-header fade-in">Results & Expected Outcomes</h2>
-                <div class="results-grid">
-                    <div class="result-category fade-in reveal-delay-1">
-                        <h3>Preliminary Results</h3>
-                        <ul class="bullet-list">
-                            <li>Android app functional</li>
-                            <li>MQTT enables sub-second alerts (faster than cellular)</li>
-                            <li>Hardware integration successful</li>
-                        </ul>
-                    </div>
-                    <div class="result-category fade-in reveal-delay-2">
-                        <h3>Expected Outcomes</h3>
-                        <ul class="bullet-list">
-                            <li><10m accuracy via NAVIC</li>
-                            <li>Reduced alert redundancy</li>
-                            <li>Cost-effective safety for legacy vehicles</li>
-                            <li>National adoption potential</li>
-                        </ul>
-                    </div>
+            <h2 class="section-header fade-in">Results & Expected Outcomes</h2>
+            <div class="results-grid">
+                <div class="result-category fade-in reveal-delay-1">
+                    <h3>Preliminary Results</h3>
+                    <ul class="bullet-list">
+                        <li>Android app functional</li>
+                        <li>MQTT enables sub-second alerts (faster than cellular)</li>
+                        <li>Hardware integration successful</li>
+                    </ul>
                 </div>
-                <p class="highlight fade-in reveal-delay-3">Next Steps: Complete MQTT/BLE; Implement thresholds; Future: ML classifier, advanced chipsets</p>
+                <div class="result-category fade-in reveal-delay-2">
+                    <h3>Expected Outcomes</h3>
+                    <ul class="bullet-list">
+                        <li><10m accuracy via NAVIC</li>
+                        <li>Reduced alert redundancy</li>
+                        <li>Cost-effective safety for legacy vehicles</li>
+                        <li>National adoption potential</li>
+                    </ul>
+                </div>
             </div>
+            <p class="highlight fade-in reveal-delay-3">Next Steps: Complete MQTT/BLE; Implement thresholds; Future: ML classifier, advanced chipsets</p>
         </div>
 
         <!-- Slide 12: Conclusions -->
         <div class="slide">
-            <div class="slide-content centered">
-                <h2 class="section-header fade-in">Conclusions</h2>
-                <div class="conclusions-content">
-                    <div class="conclusion-section fade-in reveal-delay-1">
-                        <h3>Summary</h3>
-                        <p>Project demonstrates NAVIC's role in indigenous crash detection, addressing real-world gaps in India's road safety ecosystem</p>
-                    </div>
-                    <div class="conclusion-section fade-in reveal-delay-2">
-                        <h3>Key Takeaways</h3>
-                        <ul class="bullet-list">
-                            <li>Retrofit solution for India's safety needs</li>
-                            <li>Path to scalable deployment</li>
-                            <li>Indigenous technology advantage</li>
-                        </ul>
-                    </div>
-                    <div class="conclusion-section fade-in reveal-delay-3">
-                        <h3>Call to Action</h3>
-                        <p>Feedback on MQTT/NAVIC integration; collaboration opportunities for nationwide deployment</p>
-                    </div>
+            <h2 class="section-header fade-in">Conclusions</h2>
+            <div class="conclusions-content">
+                <div class="conclusion-section fade-in reveal-delay-1">
+                    <h3>Summary</h3>
+                    <p>Project demonstrates NAVIC's role in indigenous crash detection, addressing real-world gaps in India's road safety ecosystem</p>
+                </div>
+                <div class="conclusion-section fade-in reveal-delay-2">
+                    <h3>Key Takeaways</h3>
+                    <ul class="bullet-list">
+                        <li>Retrofit solution for India's safety needs</li>
+                        <li>Path to scalable deployment</li>
+                        <li>Indigenous technology advantage</li>
+                    </ul>
+                </div>
+                <div class="conclusion-section fade-in reveal-delay-3">
+                    <h3>Call to Action</h3>
+                    <p>Feedback on MQTT/NAVIC integration; collaboration opportunities for nationwide deployment</p>
                 </div>
             </div>
         </div>
 
         <!-- Slide 13: References -->
         <div class="slide">
-            <div class="slide-content centered">
-                <h2 class="section-header fade-in">References</h2>
-                <div class="references-content">
-                    <ul class="bullet-list">
-                        <li class="fade-in reveal-delay-1">Project documentation and technical specifications</li>
-                        <li class="fade-in reveal-delay-2">MoRTH 2024 reports (~180,000 fatalities)</li>
-                        <li class="fade-in reveal-delay-3">ISRO NAVIC updates (2025) - 2.5m CEP with augmentation</li>
-                        <li class="fade-in reveal-delay-4">Literature review: Thompson 2019, relevant IoT crash detection papers</li>
-                        <li class="fade-in reveal-delay-5">EU eCall system specifications and GPS limitations</li>
-                    </ul>
-                </div>
-                <p class="highlight fade-in reveal-delay-6">Format: IEEE citation style</p>
+            <h2 class="section-header fade-in">References</h2>
+            <div class="references-content">
+                <ul class="bullet-list">
+                    <li class="fade-in reveal-delay-1">Project documentation and technical specifications</li>
+                    <li class="fade-in reveal-delay-2">MoRTH 2024 reports (~180,000 fatalities)</li>
+                    <li class="fade-in reveal-delay-3">ISRO NAVIC updates (2025) - 2.5m CEP with augmentation</li>
+                    <li class="fade-in reveal-delay-4">Literature review: Thompson 2019, relevant IoT crash detection papers</li>
+                    <li class="fade-in reveal-delay-5">EU eCall system specifications and GPS limitations</li>
+                </ul>
             </div>
+            <p class="highlight fade-in reveal-delay-6">Format: IEEE citation style</p>
         </div>
     </div>
 
